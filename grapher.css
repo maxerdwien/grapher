@@ -1,0 +1,66 @@
+#graph:active {
+	cursor: default;
+}
+
+#graph {
+	/*border: solid 1px black;*/
+}
+
+#graphbutton {
+	text-align: center;
+}
+
+#on-canvas-buttons {
+	position: absolute;
+	top: 580px;
+}
+
+div.function {
+	background-color: #dddddd;
+	padding: 7px;
+	margin-bottom: 10px;
+	line-height: 1.2;
+}
+
+div.bottom {
+	margin-top: 10px;
+}
+
+td {
+	vertical-align: top;
+}
+
+th {
+	text-align: left;
+}
+
+label {
+	margin-right: 12px;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	margin: 4px;
+	Font-weight: bold;
+}
+
+.help {
+	display:none;
+	border: solid 1px orange;
+	Font-weight: normal;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+
+
+
+
+
+
+
+

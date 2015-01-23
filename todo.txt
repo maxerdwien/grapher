@@ -1,0 +1,87 @@
+force x and y output to not use scientific notation
+
+try firefox
+
+transform into app
+
+
+
+"points per x" is the number of sample points that the program will take in the length of one unit in the x axis.
+higher values increase the accuracy of the approximation, but will require more processing power.
+
+Three different types of functions can be added.
+Normal functions simply graph x vs f(x).
+Some examples:
+f(x) = x
+f(x) = sin(x)
+f(x) = 2*x^3 - 0.2*x^2 + x
+
+First order differential equations require you to specify an equation for y' (the slope of y), as well as the x and y values for a starting point
+Some examples:
+y'(x, y) = x	initial x = 1	initial y = 0
+y'(x, y) = x-y	initial x = 0	initial y = 0
+y'(x, y) = y/x	initial x = 2	initial y = -0.2
+
+Check the "color" checkbox to make each curve get a unique color
+
+"reset" will reset the entire page, just as if you'd reloaded the page. nothing will be saved
+
+"export as image" lets you save the current graph as a png image. Does not function on mobile browsers.
+
+The big ol' "graph" button updates the display with all the changes you have made to the functions below. Alternatively, you can press enter after entering new data, for the same effect.
+
+each row on the Function Table represents one function.
+the first column is the main equation defining the function. type into this box as you would type an expression on a calculator. One caveat is that the parse will not understand the term "2x"; type 2*x instead.
+the parse is not case sensitive
+allowed variables in these expressions are: x for normal functions; x and y for first order differentials; and x y and y' for second order differentials
+recognized constants are pi and e
+the following is the list of functions that are allowed:
+trig
+	sin()
+	cos()
+	tan()
+	arcsin()
+	arccos()
+	arctan()
+	
+the next three columns are the initial conditions for differential equations.
+
+In the domain column, you can say where a function is defined. You can use this to make one piecewise function out of several functions.
+If you want to make a bound infinite, type "-infinity" or "infinity".
+
+The next two colums are output only. They are the x and y position of the point currently selected on that curve.
+
+Lastly the remove button will delete a row in the table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
