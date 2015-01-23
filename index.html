@@ -1,0 +1,92 @@
+<!DOCTYPE HTML/>
+<!--controls
+	middle mouse - revert to default axis scales
+	middle mouse double click - revert to default axis scales and return to origin
+-->
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>grapher</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="grapher.css" />
+	</head>
+	
+	<body>
+		<div id="graph-container">
+			<!-- canonical size: w=800 h=640 -->
+			<canvas id="graph" width="800" height="640"></canvas>
+			<h3 id="on-canvas-buttons">
+				<input type="button" id="graphbutton" value="graph">
+				<input type="button" value="?" id="help-button-graph" style="font-size:13px;">
+			</h3>
+		</div>
+		<div id="help-graph" class="help">
+			<h4>graph controls help</h4>
+			<ul id="mouse-controls">
+			<li><strong>select a point</strong> by mousing over it. the red dot's coordinates will be displayed for each function down below.</li>
+			<li><strong>pan the graph</strong> by clicking and dragging.</li>
+			<li><strong>zoom in and out</strong> with the mouse wheel. hold shift to only scroll on the x-axis. hold alt to only scroll on the y-axis.</li>
+			<li><strong>reset the zoom level</strong> by pressing the middle mouse button (typically by pressing down on the scroll wheel).</li>
+			<li><strong>pan back to the origin</strong> and reset the zoom level by double clicking the middle mouse button.</li>
+			<li><strong>update the graph</strong> with new functions by pressing enter or pressing the large 'graph' button.</li>
+			</ul>
+			<ul id="touch-controls">
+			<li><strong>select a point</strong> by touching it. the red dot's coordinates will be displayed for each function down below.</li>
+			<li><strong>pan the graph</strong> by dragging with two fingers.</li>
+			<li><strong>zoom in and out</strong> with a pinch and zoom gesture.</li>
+			<li><strong>update the graph</strong> with new functions by pressing the large graph button.</li>
+			</ul>
+		</div>
+		
+		<h3>functions <input type="button" value="?" id="help-button-functions" style="font-size:13px;"></h3>
+		<div id="help-functions" class="help">
+		<h4>function help</h4>
+		<p>each grey box represents one function. functions can be added with the three buttons at the bottom of the list.</p>
+		<ul>
+		<li><strong>f(x)</strong> - enter your expression here. entries are not case sensitive. the following functions are supported:
+			<ul>
+			<li><strong>standard mathematical operators</strong> - +, -, *, /, ^. note that omitting multiplication operators (e.g. 2x) is not supported.</li>
+			<li><strong>trigonometric functions</strong> - sin, cos, tan, arcsin, arccos, arctan</li>
+			<li><strong>natural log</strong> - ln (alternatively log)</li>
+			<li><strong>e^</strong> - exp (e^ also works)</li>
+			<li><strong>absolute value</strong> - abs</li>
+			<li><strong>square root</strong> - sqrt</li>
+			</ul>
+			<p>the constants pi and e are also available.</p>
+		</li>
+		<li><strong>x and y</strong> - these boxes are for output only. they display the coordinates of your currently selected point.</li>
+		<li><strong>remove</strong> - remove this function.</li>
+		<li><strong>domain</strong> - the values where this function is defined. infinity and negative infinity can simply be typed as "infinity" and "-infinity".</li>
+		</ul>
+		<p>differential equations have some additional input boxes</p>
+		<ul>
+		<li><strong>initial x, initial y, and initial y'</strong> - specify the initial conditions of the differential equation.</li>
+		</ul>
+		</div>
+		<div id="functions_list">
+		</div>
+		<input type="button" name="mode" value="add normal" id="normal">
+		<input type="button" name="mode" value="add first order differential" id="differential">
+		<input type="button" name="mode" value="add second order differential" id="differential2">
+		
+		<h3>options <input type="button" value="?" id="help-button-options" style="font-size:13px;"></h3>
+		<div id="help-options" class="help">
+		<h4>options help</h4>
+		<ul>
+		<li><strong>color</strong> - check this box to give every curve a unique color.</li>
+		<li><strong>points per x</strong> - the number of sample points that the program will take in the length of one unit in the x axis. higher values increase the accuracy of the approximation, but will require more processing power.</li>
+		<li><strong>reset</strong> - resets everything, just as if you'd reloaded the page. nothing will be saved.</li>
+		<li id="export-image-help"><strong>export as image</strong> - lets you save the current graph as a png image. does not function on mobile browsers.</li>
+		</div>
+		
+		<p>
+		<label>color <input type="checkbox" id="color"></label><br/>
+		<label>points per x: <input type="text" id="points" style=""></label><br/>
+		<input type="button" id="reset" value="reset"><br/>
+		<a><input type="button" id="export" value="export as image"></a>
+		</p>
+		
+		<script src="function.js"></script>
+		<script src="grapher.js"></script>
+	</body>
+</html>
